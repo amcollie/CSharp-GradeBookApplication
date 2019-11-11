@@ -44,10 +44,10 @@ namespace GradeBook.UserInterfaces
             switch(parts[2].ToLower())
             {
                 case "standard":
-                    var gradeBook = new StandardGradeBook(name);
+                    gradeBook = new StandardGradeBook(name);
                     break;
                 case "ranked":
-                    var gradeBook = new RankedGradeBook(name);
+                    gradeBook = new RankedGradeBook(name);
                     break;
                 default:
                     Console.WriteLine($"{parts[2]} is not a supported type of gradebook, please try again");
