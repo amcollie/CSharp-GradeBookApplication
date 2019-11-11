@@ -46,12 +46,12 @@ namespace GradeBook.UserInterfaces
             switch(parts[2].ToLower())
             {
                 case "standard":
-                    gradeBook = new StandardGradeBook(name);
+                    gradeBook = new StandardGradeBook(name, isWeighted);
                     Console.WriteLine("Created gradebook {0}.", name);
                     GradeBookUserInterface.CommandLoop(gradeBook);
                     break;
                 case "ranked":
-                    gradeBook = new RankedGradeBook(name);
+                    gradeBook = new RankedGradeBook(name, isWeighted);
                     Console.WriteLine("Created gradebook {0}.", name);
                     GradeBookUserInterface.CommandLoop(gradeBook);
                     break;
