@@ -41,7 +41,7 @@ namespace GradeBook.UserInterfaces
             }
 
             var name = parts[1];
-            var gradeBook;
+            BaseGradeBook gradeBook;
             switch(parts[2].ToLower())
             {
                 case "standard":
