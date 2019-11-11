@@ -46,17 +46,20 @@ namespace GradeBook.UserInterfaces
             {
                 case "standard":
                     gradeBook = new StandardGradeBook(name);
+                    Console.WriteLine("Created gradebook {0}.", name);
+                    GradeBookUserInterface.CommandLoop(gradeBook);
                     break;
                 case "ranked":
                     gradeBook = new RankedGradeBook(name);
+                    Console.WriteLine("Created gradebook {0}.", name);
+                    GradeBookUserInterface.CommandLoop(gradeBook);
                     break;
                 default:
                     Console.WriteLine($"{parts[2]} is not a supported type of gradebook, please try again");
                     break;
             }
 
-            Console.WriteLine("Created gradebook {0}.", name);
-            GradeBookUserInterface.CommandLoop(gradeBook);
+            
         }
 
         public static void LoadCommand(string command)
